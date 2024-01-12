@@ -1,0 +1,48 @@
+import java.util.Scanner;
+class calculator{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int sub=5,maths,english,science,sst,hindi;
+        System.out.print("Enter your name: ");
+        String name=sc.next();
+        System.out.println("Enter Your Subject Marks: ");
+        System.out.print("Maths: ");
+        maths=sc.nextInt();
+        System.out.print("English: ");
+        english=sc.nextInt();
+        System.out.print("Hindi: ");
+        hindi=sc.nextInt();
+        System.out.print("Social Studies: ");
+        sst=sc.nextInt();
+        System.out.print("Science: ");
+        science=sc.nextInt();
+        int totalmarks=(maths+hindi+english+sst+science);
+        float avgper=totalmarks/sub;
+        System.out.println("Total Marks: "+totalmarks);
+        System.out.println("Average Percentage: "+avgper+"%");
+        if(avgper<44){
+            System.out.println("You are failed in the examination");
+        }
+        else if(avgper>=44 && avgper<60){
+            System.out.println("Congratulation!\nYou Have Passed The Exam with E Grade");
+        }
+        else if(avgper>=60 && avgper<70){
+            System.out.println("Congratulation!\nYou Have Passed The Exam with D Grade");
+        }
+        else if(avgper>=70 && avgper<80){
+            System.out.println("Congratulation!\nYou Have Passed The Exam with C Grade");
+        }
+        else if(avgper>=80 && avgper<85){
+            System.out.println("Congratulation!\nYou Have Passed The Exam with B Grade");
+        }
+        else if(avgper>=85 && avgper<90){
+            System.out.println("Congratulation!\nYou Have Passed The Exam with A Grade");
+        }
+        else if(avgper>=90 && avgper<95){
+            System.out.println("Congratulation!\nYou Have Passed The Exam with A+ Grade");
+        }
+        else {
+            System.out.println("Congratulation!\nYou Have Passed The Exam with A+ Grade \nAnd you are a great sutent in our class");
+        }
+    }
+}
